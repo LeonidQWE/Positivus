@@ -1,0 +1,3 @@
+@use "./colors" as colors;
+
+$box-shadow: 0 5px 0 0 colors.$color-dark;
