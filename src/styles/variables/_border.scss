@@ -1,0 +1,6 @@
+@use "./colors" as coolors;
+
+$border: 1px solid coolors.$color-dark;
+
+$border-radius-base: 1.4rem;
+$border-radius-large: 4.5rem;
