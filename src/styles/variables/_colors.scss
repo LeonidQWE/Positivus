@@ -1,9 +1,13 @@
 $white: hsl(0, 0%, 100%);
-$gray: hsl(0, 0%, 95%);
-$black: hsl(234, 17%, 12%);
+$gray-100: hsl(0, 0%, 95%);
+$gray-200: hsl(0, 0%, 54%);
+$black-100: hsl(235, 18%, 12%);
+$black-200: hsl(233, 10%, 18%);
 $green: hsl(87, 100%, 70%);
 
 $color-light: $white;
-$color-secondary: $gray;
-$color-dark: $black;
-$color-lime: $green;
+$color-secondary: $gray-100;
+$color-dark: $black-100;
+$color-accent: $green;
+
+$color-placeholder: $gray-200;
