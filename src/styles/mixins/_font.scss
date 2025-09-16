@@ -1,0 +1,10 @@
+@mixin adaptive-font ($max: 48, $min: 16) {
+  font-size: clamp(#{$min}px, #{calc($max / 1440 * 100)}vw, #{$max}px);
+}
+
+@mixin font ( $desktop-font-size, $mobile-font-size, $font-family, $line-height, $font-weight) {
+  @include adaptive-font($desktop-font-size, $mobile-font-size);
+  font-family: $font-family;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}
