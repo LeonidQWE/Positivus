@@ -1,0 +1,17 @@
+@use "../mixins/mixins" as mixins;
+@use "../variables/variables" as vars;
+
+.logo {
+  @include mixins.flex(center, center, nowrap, false);
+  gap: 1.3rem;
+
+  &__icon {
+    color: #000;
+    width: 3.6rem;
+    aspect-ratio: 1;
+  }
+
+  &__title {
+    @include mixins.font(60, 30, vars.$font-grotesk, 1.2, 500)
+  }
+}
