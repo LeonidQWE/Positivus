@@ -1,9 +1,24 @@
 @use "../mixins/mixins" as mixins;
+@use "../variables/variables" as vars;
 
 .root {
   @include mixins.flex(center, center, nowrap, false);
   flex-direction: column;
   min-height: 100vh;
+
+  &__header,
+  &__main,
+  &__footer {
+    max-width: 1440px;
+    min-width: 360px;
+    width: 100%;
+    margin: 0 auto;
+    padding: vars.$section-padding-y-desktop vars.$section-padding-x-desktop ;
+
+    @include mixins.mobile {
+      padding: vars.$section-padding-y-mobile vars.$section-padding-x-mobile ;
+    }
+  }
 
   &__main {
     flex: 1 1 auto;
