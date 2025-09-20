@@ -1,0 +1,26 @@
+@use "../mixins/mixins" as mixins;
+@use "../variables/variables" as vars;
+
+.button {
+  @include mixins.font(20, 20, vars.$font-grotesk, 1.2, vars.$font-weight-normal);
+  border-radius: vars.$border-radius-base;
+
+  @include mixins.hover {
+    scale: 1.2;
+  }
+
+  &_color-transparent {
+    border: vars.$border;
+    background-color: transparent;
+  }
+
+  &_color-dark {
+    background-color: vars.$color-dark;
+    color: vars.$color-light;
+  }
+
+  &color-accent {
+    background-color: vars.$color-accent;
+    color: vars.$color-light;
+  }
+}
