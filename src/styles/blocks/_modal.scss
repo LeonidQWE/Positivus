@@ -1,0 +1,38 @@
+@use "../mixins/mixins" as mixins;
+@use "../variables/variables" as vars;
+
+.modal {
+  &__btn-wrapper {
+    @include mixins.flex(flex-end, center, nowrap, false);
+  }
+
+  &__close-btn {
+    width: 4.8rem;
+    aspect-ratio: 1;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      width: 50%;
+      height: 2px;
+      background-color: vars.$color-dark;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+    }
+
+    &::before{
+      rotate: 45deg;
+    }
+
+    &::after{
+      rotate: -45deg;
+    }
+  }
+
+  &__close-btn-text {
+    display: none;
+  }
+}

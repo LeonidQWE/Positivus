@@ -16,15 +16,46 @@
         <span class="logo__title">Positivus</span>
       </div>
 
-      <nav class="header__navbar"></nav>
+      <nav class="header__navbar navbar">
+        <ul class="navbar__list">
+          <li class="navbar__item"><a href="#" class="navbar__link">About us</a></li>
+          <li class="navbar__item"><a href="#" class="navbar__link">Services</a></li>
+          <li class="navbar__item"><a href="#" class="navbar__link">Use Cases</a></li>
+          <li class="navbar__item"><a href="#" class="navbar__link">Pricing</a></li>
+          <li class="navbar__item"><a href="#" class="navbar__link">Blog</a></li>
+        </ul>
+      </nav>
 
+      <button type="button" class="header__button button button_color-transparent">Request a quote</button>
 
-
+      <button
+        type="button"
+        class="header__burger burger"
+        onclick="modalOverlay.showModal()">
+        <span class="burger__text">Open mobile menu</span>
+      </button>
     </header>
 
     <main class="root__main main"></main>
 
     <footer class="root__footer footer"></footer>
   </div>
+
+  <dialog class="root__modal modal" id="modalOverlay">
+    <form method="dialog" class="modal__btn-wrapper">
+      <button type="submit" class="modal__close-btn">
+        <span class="modal modal__close-btn-text">Close</span>
+      </button>
+    </form>
+    <nav class="modal__modal-menu modal-menu">
+      <ul class="modal-menu__list">
+        <li class="modal-menu__item"><a href="#" class="modal-menu__link">About us</a></li>
+        <li class="modal-menu__item"><a href="#" class="modal-menu__link">Services</a></li>
+        <li class="modal-menu__item"><a href="#" class="modal-menu__link">Use Cases</a></li>
+        <li class="modal-menu__item"><a href="#" class="modal-menu__link">Pricing</a></li>
+        <li class="modal-menu__item"><a href="#" class="modal-menu__link">Blog</a></li>
+      </ul>
+    </nav>
+  </dialog>
 </body>
 </html>

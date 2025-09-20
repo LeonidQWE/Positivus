@@ -1,0 +1,18 @@
+@use "../mixins/mixins" as mixins;
+@use "../variables/variables" as vars;
+
+.modal-menu {
+  &__list {
+    @include mixins.flex(flex-start, center, nowrap, false);
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  &__item {
+    @include mixins.font(20, 16, vars.$font-grotesk, 1.2, vars.$font-weight-normal);
+  }
+
+  &__link {
+    color: vars.$color-dark;
+  }
+}
