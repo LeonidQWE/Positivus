@@ -1,0 +1,30 @@
+@use "../mixins/mixins" as mixins;
+@use "../variables/variables" as vars;
+
+.burger {
+  display: none;
+
+  &__text {
+    display: none;
+  }
+
+  @include mixins.tablet {
+    display: block;
+    width: 4.8rem;
+    aspect-ratio: 1;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      width: 50%;
+      height: 0.2rem;
+      background-color: vars.$color-dark;
+      border-radius: 2rem;
+      box-shadow: 0 -8px, 0 8px;
+    }
+  }
+}
