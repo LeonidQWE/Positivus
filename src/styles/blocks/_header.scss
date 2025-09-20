@@ -1,0 +1,22 @@
+@use "../mixins/mixins" as mixins;
+@use "../variables/variables" as vars;
+
+.header {
+  @include mixins.flex(space-between, center, nowrap, false);
+  column-gap: 4rem;
+
+  &__navbar {
+    margin-left: auto;
+  }
+
+  &__button {
+    padding: vars.$btn-padding-y vars.$btn-padding-x-base;
+  }
+
+  &__navbar,
+  &__button {
+    @include mixins.tablet {
+      display: none;
+    }
+  }
+}
